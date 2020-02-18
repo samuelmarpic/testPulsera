@@ -35,13 +35,13 @@ function Dao(){
         });
     };
     function insertar(coleccion,elemento,callback){
+        console.log(coleccion, elemento);
         coleccion.insertOne(elemento,function(err,result){
             if(err){
-                console.log("error");
+                console.log(err);
             }
             else{
                 console.log("Nuevo elemento creado");
-                callback(elemento);
             }
         });
     }
